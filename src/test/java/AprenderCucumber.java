@@ -6,6 +6,7 @@ import java.util.Date;
 import org.junit.Assert;
 
 import cucumber.api.PendingException;
+import cucumber.api.Transform;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Então;
 import cucumber.api.java.pt.Quando;
@@ -51,13 +52,9 @@ public class AprenderCucumber {
 
 	Date entrega = new Date();
 
-	@Dado("^que a entrega é dia (\\d+)/(\\d+)/(\\d+)$")
-	public void que_a_entrega_é_dia(int dia, int mes, int ano) throws Throwable {
-		Calendar cal = Calendar.getInstance();
-		cal.set(Calendar.DAY_OF_MONTH, dia);
-		cal.set(Calendar.MONTH, mes - 1);
-		cal.set(Calendar.YEAR, ano);
-		entrega = cal.getTime();
+	@Dado("^que a entrega é dia (.*)$")
+	public void que_a_entrega_é_dia(@Transform(DateConverter.class) Date data) throws Throwable {
+		entrega = data;
 	}
 
 	@Quando("^a entrega atrasar em (\\d+) (dia|dias|mes|meses)$")
@@ -85,8 +82,9 @@ public class AprenderCucumber {
 	public void queOTicketÉAF(String tipo, String arg1) throws Throwable {
 	}
 
-	@Dado("^que o valor da passagem é R\\$ (\\d+),(\\d+)$")
-	public void queOValorDaPassagemÉR$(int arg1, int arg2) throws Throwable {
+	@Dado("^que o valor da passagem é R\\$ (.*)$")
+	public void queOValorDaPassagemÉR$(Double numero) throws Throwable {
+		System.out.println(numero);
 	}
 
 	@Dado("^que o nome do passageiro é \"(.{5,20})\"$")
