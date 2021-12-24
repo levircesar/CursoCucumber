@@ -3,6 +3,8 @@ package br.ce.wcaquino.steps;
 import java.util.Calendar;
 import java.util.Date;
 
+import javax.management.RuntimeErrorException;
+
 import org.junit.Assert;
 
 import br.ce.wcaquino.entidades.Filme;
@@ -18,6 +20,7 @@ public class AlugarFilmeSteps {
 	private Filme filme;
 	private AluguelService aluguel = new AluguelService();
 	private NotaAluguel nota;
+	private String erro;
 
 	@Dado("^um filme com estoque de (\\d+) unidades$")
 	public void umFilmeComEstoqueDeUnidades(int arg1) throws Throwable {
@@ -32,7 +35,12 @@ public class AlugarFilmeSteps {
 
 	@Quando("^alugar$")
 	public void alugar() throws Throwable {
-		nota = aluguel.alugar(filme);
+		try {
+			nota = aluguel.alugar(filme);
+		} catch (RuntimeException e) {
+			erro = e.getMessage();
+		}
+		
 	}
 
 	@Então("^o preço do aluguel será R\\$ (\\d+)$")
@@ -58,4 +66,10 @@ public class AlugarFilmeSteps {
 	public void oEstoqueDoFilmeSeráUnidade(int arg1) throws Throwable {
 		Assert.assertEquals(arg1, filme.getEstoque());
 	}
+	
+	@Então("^não será possivel por falta de estoque$")
+	public void nãoSeráPossivelPorFaltaDeEstoque() throws Throwable {
+	    Assert.assertEquals("Filme sem estoque", erro);
+	}
+
 }
