@@ -5,6 +5,12 @@
 	<groupId>br.ce.wcaquino</groupId>
 	<artifactId>CursoCucumber</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	
+	<properties>
+        <java-version>1.8</java-version>
+        <maven-compiler-plugin-version>3.6.1</maven-compiler-plugin-version>
+        <maven-shade-plugin-version>3.0.0</maven-shade-plugin-version>
+    </properties>
 
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
