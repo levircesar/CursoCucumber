@@ -9,7 +9,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features = "src/test/resources/features/alugar_filme.feature",
 		glue = "br.ce.wcaquino.steps",
-		plugin = "pretty",
+		plugin = {"pretty", "html:target/report-html", "json:target/report.json"},
 		tags = {},
 		monochrome = true,
 		snippets = SnippetType.CAMELCASE,
