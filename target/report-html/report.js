@@ -19,7 +19,7 @@ formatter.feature({
   ]
 });
 formatter.scenarioOutline({
-  "line": 18,
+  "line": 12,
   "name": "Deve validar regras cadastro contas",
   "description": "",
   "id": "cadastro-de-contas;deve-validar-regras-cadastro-contas",
@@ -27,22 +27,17 @@ formatter.scenarioOutline({
   "keyword": "Esquema do Cenário"
 });
 formatter.step({
-  "line": 19,
-  "name": "informo a conta \"\u003cconta\u003e\"",
+  "line": 13,
+  "name": "adiciono a conta \"\u003cconta\u003e\"",
   "keyword": "Quando "
 });
 formatter.step({
-  "line": 20,
-  "name": "seleciono Salvar",
-  "keyword": "E "
-});
-formatter.step({
-  "line": 21,
+  "line": 14,
   "name": "recebo a mensagem \"\u003cmensagem\u003e\"",
   "keyword": "Então "
 });
 formatter.examples({
-  "line": 23,
+  "line": 16,
   "name": "",
   "description": "",
   "id": "cadastro-de-contas;deve-validar-regras-cadastro-contas;",
@@ -52,7 +47,7 @@ formatter.examples({
         "conta",
         "mensagem"
       ],
-      "line": 24,
+      "line": 17,
       "id": "cadastro-de-contas;deve-validar-regras-cadastro-contas;;1"
     },
     {
@@ -60,7 +55,7 @@ formatter.examples({
         "Conta de Teste",
         "Conta adicionada com sucesso!"
       ],
-      "line": 25,
+      "line": 18,
       "id": "cadastro-de-contas;deve-validar-regras-cadastro-contas;;2"
     },
     {
@@ -68,7 +63,7 @@ formatter.examples({
         "",
         "Informe o nome da conta"
       ],
-      "line": 26,
+      "line": 19,
       "id": "cadastro-de-contas;deve-validar-regras-cadastro-contas;;3"
     },
     {
@@ -76,15 +71,11 @@ formatter.examples({
         "Conta mesmo nome",
         "Já existe uma conta com esse nome!"
       ],
-      "line": 27,
+      "line": 20,
       "id": "cadastro-de-contas;deve-validar-regras-cadastro-contas;;4"
     }
   ],
   "keyword": "Exemplos"
-});
-formatter.before({
-  "duration": 136800,
-  "status": "passed"
 });
 formatter.background({
   "line": 9,
@@ -95,102 +86,18 @@ formatter.background({
 });
 formatter.step({
   "line": 10,
-  "name": "que estou acessando a aplicação",
+  "name": "que desejo adicionar uma conta",
   "keyword": "Dado "
 });
-formatter.step({
-  "line": 11,
-  "name": "informo o usuário \"levir@gmail.com\"",
-  "keyword": "Quando "
-});
-formatter.step({
-  "line": 12,
-  "name": "a senha \"levir123\"",
-  "keyword": "E "
-});
-formatter.step({
-  "line": 13,
-  "name": "seleciono entrar",
-  "keyword": "E "
-});
-formatter.step({
-  "line": 14,
-  "name": "visualizo a página inicial",
-  "keyword": "Então "
-});
-formatter.step({
-  "line": 15,
-  "name": "seleciono Contas",
-  "keyword": "Quando "
-});
-formatter.step({
-  "line": 16,
-  "name": "seleciono Adicionar",
-  "keyword": "E "
-});
 formatter.match({
-  "location": "InserirContasSteps.queEstouAcessandoAAplicação()"
+  "location": "InserirContasSteps.queDesejoAdicionarUmaConta()"
 });
 formatter.result({
-  "duration": 5387769700,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "levir@gmail.com",
-      "offset": 19
-    }
-  ],
-  "location": "InserirContasSteps.informoOUsuário(String)"
-});
-formatter.result({
-  "duration": 65590300,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "levir123",
-      "offset": 9
-    }
-  ],
-  "location": "InserirContasSteps.aSenha(String)"
-});
-formatter.result({
-  "duration": 40271500,
-  "status": "passed"
-});
-formatter.match({
-  "location": "InserirContasSteps.selecionoEntrar()"
-});
-formatter.result({
-  "duration": 504848000,
-  "status": "passed"
-});
-formatter.match({
-  "location": "InserirContasSteps.visualizoAPáginaInicial()"
-});
-formatter.result({
-  "duration": 25512600,
-  "status": "passed"
-});
-formatter.match({
-  "location": "InserirContasSteps.selecionoContas()"
-});
-formatter.result({
-  "duration": 244490100,
-  "status": "passed"
-});
-formatter.match({
-  "location": "InserirContasSteps.selecionoAdicionar()"
-});
-formatter.result({
-  "duration": 182440400,
+  "duration": 7055380900,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 25,
+  "line": 18,
   "name": "Deve validar regras cadastro contas",
   "description": "",
   "id": "cadastro-de-contas;deve-validar-regras-cadastro-contas;;2",
@@ -204,20 +111,15 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "line": 19,
-  "name": "informo a conta \"Conta de Teste\"",
+  "line": 13,
+  "name": "adiciono a conta \"Conta de Teste\"",
   "matchedColumns": [
     0
   ],
   "keyword": "Quando "
 });
 formatter.step({
-  "line": 20,
-  "name": "seleciono Salvar",
-  "keyword": "E "
-});
-formatter.step({
-  "line": 21,
+  "line": 14,
   "name": "recebo a mensagem \"Conta adicionada com sucesso!\"",
   "matchedColumns": [
     1
@@ -228,20 +130,13 @@ formatter.match({
   "arguments": [
     {
       "val": "Conta de Teste",
-      "offset": 17
+      "offset": 18
     }
   ],
-  "location": "InserirContasSteps.informoAConta(String)"
+  "location": "InserirContasSteps.adicionoAConta(String)"
 });
 formatter.result({
-  "duration": 39436200,
-  "status": "passed"
-});
-formatter.match({
-  "location": "InserirContasSteps.selecionoSalvar()"
-});
-formatter.result({
-  "duration": 258087200,
+  "duration": 373453800,
   "status": "passed"
 });
 formatter.match({
@@ -254,19 +149,15 @@ formatter.match({
   "location": "InserirContasSteps.receboAMensagem(String)"
 });
 formatter.result({
-  "duration": 13705300,
+  "duration": 44499000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 58775300,
+  "duration": 66795800,
   "status": "passed"
 });
 formatter.after({
-  "duration": 873998400,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 57700,
+  "duration": 1037288100,
   "status": "passed"
 });
 formatter.background({
@@ -278,102 +169,18 @@ formatter.background({
 });
 formatter.step({
   "line": 10,
-  "name": "que estou acessando a aplicação",
+  "name": "que desejo adicionar uma conta",
   "keyword": "Dado "
 });
-formatter.step({
-  "line": 11,
-  "name": "informo o usuário \"levir@gmail.com\"",
-  "keyword": "Quando "
-});
-formatter.step({
-  "line": 12,
-  "name": "a senha \"levir123\"",
-  "keyword": "E "
-});
-formatter.step({
-  "line": 13,
-  "name": "seleciono entrar",
-  "keyword": "E "
-});
-formatter.step({
-  "line": 14,
-  "name": "visualizo a página inicial",
-  "keyword": "Então "
-});
-formatter.step({
-  "line": 15,
-  "name": "seleciono Contas",
-  "keyword": "Quando "
-});
-formatter.step({
-  "line": 16,
-  "name": "seleciono Adicionar",
-  "keyword": "E "
-});
 formatter.match({
-  "location": "InserirContasSteps.queEstouAcessandoAAplicação()"
+  "location": "InserirContasSteps.queDesejoAdicionarUmaConta()"
 });
 formatter.result({
-  "duration": 4816053000,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "levir@gmail.com",
-      "offset": 19
-    }
-  ],
-  "location": "InserirContasSteps.informoOUsuário(String)"
-});
-formatter.result({
-  "duration": 48499100,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "levir123",
-      "offset": 9
-    }
-  ],
-  "location": "InserirContasSteps.aSenha(String)"
-});
-formatter.result({
-  "duration": 29872900,
-  "status": "passed"
-});
-formatter.match({
-  "location": "InserirContasSteps.selecionoEntrar()"
-});
-formatter.result({
-  "duration": 471717000,
-  "status": "passed"
-});
-formatter.match({
-  "location": "InserirContasSteps.visualizoAPáginaInicial()"
-});
-formatter.result({
-  "duration": 25326900,
-  "status": "passed"
-});
-formatter.match({
-  "location": "InserirContasSteps.selecionoContas()"
-});
-formatter.result({
-  "duration": 243797300,
-  "status": "passed"
-});
-formatter.match({
-  "location": "InserirContasSteps.selecionoAdicionar()"
-});
-formatter.result({
-  "duration": 205994700,
+  "duration": 6548367300,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 26,
+  "line": 19,
   "name": "Deve validar regras cadastro contas",
   "description": "",
   "id": "cadastro-de-contas;deve-validar-regras-cadastro-contas;;3",
@@ -387,20 +194,15 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "line": 19,
-  "name": "informo a conta \"\"",
+  "line": 13,
+  "name": "adiciono a conta \"\"",
   "matchedColumns": [
     0
   ],
   "keyword": "Quando "
 });
 formatter.step({
-  "line": 20,
-  "name": "seleciono Salvar",
-  "keyword": "E "
-});
-formatter.step({
-  "line": 21,
+  "line": 14,
   "name": "recebo a mensagem \"Informe o nome da conta\"",
   "matchedColumns": [
     1
@@ -411,20 +213,13 @@ formatter.match({
   "arguments": [
     {
       "val": "",
-      "offset": 17
+      "offset": 18
     }
   ],
-  "location": "InserirContasSteps.informoAConta(String)"
+  "location": "InserirContasSteps.adicionoAConta(String)"
 });
 formatter.result({
-  "duration": 37985400,
-  "status": "passed"
-});
-formatter.match({
-  "location": "InserirContasSteps.selecionoSalvar()"
-});
-formatter.result({
-  "duration": 217163700,
+  "duration": 244027200,
   "status": "passed"
 });
 formatter.match({
@@ -437,19 +232,15 @@ formatter.match({
   "location": "InserirContasSteps.receboAMensagem(String)"
 });
 formatter.result({
-  "duration": 17903400,
+  "duration": 20957600,
   "status": "passed"
 });
 formatter.after({
-  "duration": 52877400,
+  "duration": 50700100,
   "status": "passed"
 });
 formatter.after({
-  "duration": 855566400,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 68400,
+  "duration": 1145921500,
   "status": "passed"
 });
 formatter.background({
@@ -461,102 +252,18 @@ formatter.background({
 });
 formatter.step({
   "line": 10,
-  "name": "que estou acessando a aplicação",
+  "name": "que desejo adicionar uma conta",
   "keyword": "Dado "
 });
-formatter.step({
-  "line": 11,
-  "name": "informo o usuário \"levir@gmail.com\"",
-  "keyword": "Quando "
-});
-formatter.step({
-  "line": 12,
-  "name": "a senha \"levir123\"",
-  "keyword": "E "
-});
-formatter.step({
-  "line": 13,
-  "name": "seleciono entrar",
-  "keyword": "E "
-});
-formatter.step({
-  "line": 14,
-  "name": "visualizo a página inicial",
-  "keyword": "Então "
-});
-formatter.step({
-  "line": 15,
-  "name": "seleciono Contas",
-  "keyword": "Quando "
-});
-formatter.step({
-  "line": 16,
-  "name": "seleciono Adicionar",
-  "keyword": "E "
-});
 formatter.match({
-  "location": "InserirContasSteps.queEstouAcessandoAAplicação()"
+  "location": "InserirContasSteps.queDesejoAdicionarUmaConta()"
 });
 formatter.result({
-  "duration": 4760195300,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "levir@gmail.com",
-      "offset": 19
-    }
-  ],
-  "location": "InserirContasSteps.informoOUsuário(String)"
-});
-formatter.result({
-  "duration": 47099300,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "levir123",
-      "offset": 9
-    }
-  ],
-  "location": "InserirContasSteps.aSenha(String)"
-});
-formatter.result({
-  "duration": 34604700,
-  "status": "passed"
-});
-formatter.match({
-  "location": "InserirContasSteps.selecionoEntrar()"
-});
-formatter.result({
-  "duration": 465662000,
-  "status": "passed"
-});
-formatter.match({
-  "location": "InserirContasSteps.visualizoAPáginaInicial()"
-});
-formatter.result({
-  "duration": 22568900,
-  "status": "passed"
-});
-formatter.match({
-  "location": "InserirContasSteps.selecionoContas()"
-});
-formatter.result({
-  "duration": 252444200,
-  "status": "passed"
-});
-formatter.match({
-  "location": "InserirContasSteps.selecionoAdicionar()"
-});
-formatter.result({
-  "duration": 191981600,
+  "duration": 7088908900,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 27,
+  "line": 20,
   "name": "Deve validar regras cadastro contas",
   "description": "",
   "id": "cadastro-de-contas;deve-validar-regras-cadastro-contas;;4",
@@ -570,20 +277,15 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "line": 19,
-  "name": "informo a conta \"Conta mesmo nome\"",
+  "line": 13,
+  "name": "adiciono a conta \"Conta mesmo nome\"",
   "matchedColumns": [
     0
   ],
   "keyword": "Quando "
 });
 formatter.step({
-  "line": 20,
-  "name": "seleciono Salvar",
-  "keyword": "E "
-});
-formatter.step({
-  "line": 21,
+  "line": 14,
   "name": "recebo a mensagem \"Já existe uma conta com esse nome!\"",
   "matchedColumns": [
     1
@@ -594,20 +296,13 @@ formatter.match({
   "arguments": [
     {
       "val": "Conta mesmo nome",
-      "offset": 17
+      "offset": 18
     }
   ],
-  "location": "InserirContasSteps.informoAConta(String)"
+  "location": "InserirContasSteps.adicionoAConta(String)"
 });
 formatter.result({
-  "duration": 46236900,
-  "status": "passed"
-});
-formatter.match({
-  "location": "InserirContasSteps.selecionoSalvar()"
-});
-formatter.result({
-  "duration": 198036300,
+  "duration": 303961000,
   "status": "passed"
 });
 formatter.match({
@@ -620,15 +315,15 @@ formatter.match({
   "location": "InserirContasSteps.receboAMensagem(String)"
 });
 formatter.result({
-  "duration": 22199100,
+  "duration": 25710900,
   "status": "passed"
 });
 formatter.after({
-  "duration": 43951700,
+  "duration": 48279200,
   "status": "passed"
 });
 formatter.after({
-  "duration": 854576800,
+  "duration": 1004218600,
   "status": "passed"
 });
 });
