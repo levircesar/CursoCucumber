@@ -17,7 +17,7 @@ Cenário: Deve inserir uma conta com sucesso
 	E informo a conta "Conta de Teste"
 	E seleciono Salvar
 	Então a conta é inserida com sucesso
-	
+
 Cenário: Não deve inserir uma conta sem nome
 	Dado que estou acessando a aplicação
 	Quando informo o usuário "levir@gmail.com"
@@ -29,7 +29,6 @@ Cenário: Não deve inserir uma conta sem nome
 	E seleciono Salvar
 	Então sou notificado que o nome da conta é obrigatório
 
-@ignore
 Cenário: Não deve inserir uma conta com nome já existente
 	Dado que estou acessando a aplicação
 	Quando informo o usuário "levir@gmail.com"
