@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="7" failures="0" name="br.ce.wcaquino.runners.RunnerTest" time="0.041" errors="0" skipped="0">
+<testsuite tests="3" failures="0" name="br.ce.wcaquino.runners.RunnerFuncionalTest" time="22.124" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="16.0.1+9-24"/>
@@ -60,11 +60,7 @@
     <property name="sun.stdout.encoding" value="cp850"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="Aprender Cucumber" name="Deve executar especificação" time="0.011"/>
-  <testcase classname="Aprender Cucumber" name="Deve incrementar contador" time="0.004"/>
-  <testcase classname="Aprender Cucumber" name="Deve incrementar contador" time="0.003"/>
-  <testcase classname="Aprender Cucumber" name="Deve calcular atraso na entrega" time="0.006"/>
-  <testcase classname="Aprender Cucumber" name="Deve calcular atraso na entrega da China" time="0.005"/>
-  <testcase classname="Aprender Cucumber" name="Deve criar steps genéricos para estes passos" time="0.008"/>
-  <testcase classname="Aprender Cucumber" name="Deve reaproveitar os steps &quot;Dado&quot; do cenário anterior" time="0.004"/>
+  <testcase classname="Cadastro de contas" name="Deve validar regras cadastro contas" time="7.5"/>
+  <testcase classname="Cadastro de contas" name="Deve validar regras cadastro contas" time="7.667"/>
+  <testcase classname="Cadastro de contas" name="Deve validar regras cadastro contas" time="6.957"/>
 </testsuite>

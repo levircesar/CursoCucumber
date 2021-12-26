@@ -6,11 +6,9 @@ import java.util.Date;
 
 import org.junit.Assert;
 
-import br.ce.wcaquino.converters.DateConverter;
-import cucumber.api.Transform;
-import cucumber.api.java.pt.Dado;
-import cucumber.api.java.pt.Então;
-import cucumber.api.java.pt.Quando;
+import io.cucumber.java.pt.Dado;
+import io.cucumber.java.pt.Então;
+import io.cucumber.java.pt.Quando;
 
 public class AprenderCucumberSteps {
 
@@ -21,64 +19,57 @@ public class AprenderCucumberSteps {
 
 	@Quando("^executá-lo$")
 	public void executáLo() throws Throwable {
-
 	}
 
 	@Então("^a especificação deve finalizar com sucesso$")
 	public void aEspecificaçãoDeveFinalizarComSucesso() throws Throwable {
-
 	}
-
-	@Então("^outro passo qualquer$")
-	public void outroPassoQualquer() throws Throwable {
-
-	}
-
+	
 	private int contador = 0;
-
+	
 	@Dado("^que o valor do contador é (\\d+)$")
 	public void queOValorDoContadorÉ(int arg1) throws Throwable {
-		contador = arg1;
+	    contador = arg1;
 	}
 
 	@Quando("^eu incrementar em (\\d+)$")
 	public void euIncrementarEm(int arg1) throws Throwable {
-		contador = contador + arg1;
+	    contador = contador + arg1;
 	}
 
 	@Então("^o valor do contador será (\\d+)$")
 	public void oValorDoContadorSerá(int arg1) throws Throwable {
-		Assert.assertEquals(arg1, contador);
+	    Assert.assertEquals(arg1, contador);
 	}
-
+	
 	Date entrega = new Date();
-
-	@Dado("^que a entrega é dia (.*)$")
-	public void que_a_entrega_é_dia(@Transform(DateConverter.class) Date data) throws Throwable {
-		entrega = data;
+	
+	@Dado("que a entrega é dia {data}")
+	public void queAEntregaÉDia(Date data) throws Throwable {
+	    entrega = data;
+	    System.out.println(entrega);
 	}
 
 	@Quando("^a entrega atrasar em (\\d+) (dia|dias|mes|meses)$")
-	public void a_entrega_atrasar_em_dias(int arg1, String tempo) throws Throwable {
-		Calendar cal = Calendar.getInstance();
-		cal.setTime(entrega);
-		if (tempo.equals("dias")) {
-			cal.add(Calendar.DAY_OF_MONTH, arg1);
-		}
-		if (tempo.equals("meses")) {
-			cal.add(Calendar.MONTH, arg1);
-		}
-
-		entrega = cal.getTime();
+	public void aEntregaAtrasarEmDias(int arg1, String tempo) throws Throwable {
+	    Calendar cal = Calendar.getInstance();
+	    cal.setTime(entrega);
+	    if(tempo.equals("dias")) {
+	    	cal.add(Calendar.DAY_OF_MONTH, arg1);
+	    }
+	    if(tempo.equals("meses")) {
+	    	cal.add(Calendar.MONTH, arg1);
+	    }
+	    entrega = cal.getTime();
 	}
 
 	@Então("^a entrega será efetuada em (\\d{2}\\/\\d{2}\\/\\d{4})$")
-	public void a_entrega_será_efetuada_em(String data) throws Throwable {
+	public void aEntregaSeráEfetuadaEm(String data) throws Throwable {
 		DateFormat format = new SimpleDateFormat("dd/MM/yyyy");
 		String dataFormatada = format.format(entrega);
 		Assert.assertEquals(data, dataFormatada);
 	}
-
+	
 	@Dado("^que o ticket( especial)? é (A.\\d{3})$")
 	public void queOTicketÉAF(String tipo, String arg1) throws Throwable {
 	}
@@ -96,13 +87,12 @@ public class AprenderCucumberSteps {
 	public void queOTelefoneDoPassageiroÉ(String telefone) throws Throwable {
 	}
 
-	@Quando("^criar os steps$")
+	@Dado("^criar os steps$")
 	public void criarOsSteps() throws Throwable {
 	}
 
-	@Então("^o teste vai funcionar$")
+	@Dado("^o teste vai funcionar$")
 	public void oTesteVaiFuncionar() throws Throwable {
 	}
-
 
 }

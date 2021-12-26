@@ -1,4 +1,6 @@
 C:\Users\levir\cucumber-workspace\CursoCucumber\src\test\java\br\ce\wcaquino\steps\AlugarFilmeSteps.java
 C:\Users\levir\cucumber-workspace\CursoCucumber\src\test\java\br\ce\wcaquino\runners\RunnerTest.java
+C:\Users\levir\cucumber-workspace\CursoCucumber\src\test\java\br\ce\wcaquino\config\RegistryCucumber.java
 C:\Users\levir\cucumber-workspace\CursoCucumber\src\test\java\br\ce\wcaquino\steps\AprenderCucumberSteps.java
-C:\Users\levir\cucumber-workspace\CursoCucumber\src\test\java\br\ce\wcaquino\converters\DateConverter.java
+C:\Users\levir\cucumber-workspace\CursoCucumber\src\test\java\br\ce\wcaquino\steps\InserirContasSteps.java
+C:\Users\levir\cucumber-workspace\CursoCucumber\src\test\java\br\ce\wcaquino\runners\RunnerFuncionalTest.java
